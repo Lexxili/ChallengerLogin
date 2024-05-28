@@ -1,7 +1,6 @@
 package com.abraun.challengerlogin
 
 import android.content.Intent
-import android.icu.text.LocaleDisplayNames
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity

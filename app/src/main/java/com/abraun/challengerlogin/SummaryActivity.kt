@@ -27,7 +27,7 @@ class SummaryActivity : AppCompatActivity() {
 
     private fun showSummary(){
         var personData = intent.getSerializableExtra("Message") as PersonData
-        var summaryText = """
+        val summaryText = """
             Your personal Data:
             
             ${personData.getFullName()}
