@@ -12,10 +12,9 @@
     <string name="hint_town">Town</string>
     <string name="hint_password">Password</string>
     <string name="text_create_account">Create Account</string>
-
-    <string name="headline_login_screen">Login</string>
-    <string name="hint_login">Login</string>
+    <string name="hint_login">Log In</string>
     <string name="text_send">Send</string>
     <string name="text_correct">Correct</string>
-
+    <string name="hint_signup">Sign Up</string>
+    <string name="text_back">\u00AB Back</string>
 </resources>

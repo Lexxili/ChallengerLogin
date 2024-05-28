@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="27dp"
             android:textSize="54sp"
-            android:text="@string/headline_register_screen"
+            android:text="@string/hint_signup"
             tools:viewBindingIgnore="true"/>
 
         <LinearLayout
@@ -80,6 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Samplestreet"
+                    android:inputType="textCapWords"
                     tools:viewBindingIgnore="true"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -139,18 +140,36 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="@string/hint_country"-->
+<!--            android:layout_marginTop="8dp">-->
+
+<!--            <Spinner-->
+<!--                android:id="@+id/spinner_country"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                tools:listitem="@android:layout/simple_list_item_1" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_country"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:hint="@string/hint_country">
 
-            <Spinner
-                android:id="@+id/spinner_country"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                tools:listitem="@android:layout/simple_list_item_1"/>
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_text_view_country"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:inputType="text"
+                tools:viewBindingIgnore="true"
+                tools:ignore="LabelFor" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -164,7 +183,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                tools:text="sample@sample.com"
+                tools:text="jane.doe@sample.com"
                 tools:viewBindingIgnore="true" />
 
         </com.google.android.material.textfield.TextInputLayout>

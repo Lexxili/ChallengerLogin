@@ -1,5 +1,7 @@
 package com.abraun.challengerlogin
 
+import android.content.Intent
+import android.icu.text.LocaleDisplayNames
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
@@ -20,9 +22,10 @@ class RegisterActivity : AppCompatActivity() {
             onCreateClicked()
         }
 
-        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, arrayOf(
-                Locale.getAvailableLocales()))
-        binding.spinnerCountry.adapter = spinnerAdapter
+        //fillCountrySpinner()
+        setCountry()
+
+
     }
 
     private fun onCreateClicked() {
@@ -33,8 +36,51 @@ class RegisterActivity : AppCompatActivity() {
             binding.editTextPostalCode.text.toString().toInt(),
             binding.editTextTown.text.toString(),
             // todo prüfung einbauen für null pointer
-            Locale(binding.spinnerCountry.selectedItem.toString()),
+            Locale(binding.autoCompleteTextViewCountry.text.toString()),
+            //Locale(binding.spinnerCountry.selectedItem.toString()),
             binding.editTextEmail.text.toString(),
             binding.editTextPassword.text.toString())
+
+        val summaryActivityIntent = Intent(this, SummaryActivity::class.java)
+        summaryActivityIntent.putExtra("Message", personData)
+        startActivity(summaryActivityIntent)
+    }
+
+    private fun fillCountrySpinner(){
+        // searches the system language
+        val locale = Locale.getDefault()
+
+        // finds the country names
+        val countryNames = Locale.getISOCountries().map { countryCode ->
+            Locale("", countryCode).getDisplayCountry(locale)
+        }.sorted()
+
+
+        // sets the names in the spinner
+        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,
+            countryNames)
+
+        //binding.spinnerCountry.adapter = spinnerAdapter
+    }
+
+    private fun setCountry(){
+        // searches the system language
+        val locale = Locale.getDefault()
+
+        // finds the country names
+        val countryNames = Locale.getISOCountries().map { countryCode ->
+            Locale("", countryCode).getDisplayCountry(locale)
+        }.sorted()
+
+
+        // sets the names in the spinner
+        val dropdownAdapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line,
+            countryNames)
+
+        binding.autoCompleteTextViewCountry.setAdapter(dropdownAdapter)
+
+        binding.autoCompleteTextViewCountry.setOnClickListener {
+            binding.autoCompleteTextViewCountry.showDropDown()
+        }
     }
 }

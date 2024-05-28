@@ -25,6 +25,17 @@
         </activity>
 
         <activity
+            android:name=".AcceptedActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="Register Page"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.Register" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".SummaryActivity"
             android:parentActivityName=".RegisterActivity"
             android:label="Summary Page"
