@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             onLoginClicked()
         }
 
-        binding.buttonSignup.setOnClickListener{
+        binding.buttonCreateAccount.setOnClickListener{
             onSignupClicked()
         }
     }

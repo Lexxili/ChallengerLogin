@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Challenger</string>
+    <string name="headline_register_screen">Registrierung</string>
+    <string name="hint_first_name">Vorname</string>
+    <string name="hint_last_name">Nachame</string>
+    <string name="hint_email">E-Mail Adresse</string>
+    <string name="hint_street">Straße</string>
+    <string name="hint_house_number">Hausnummer</string>
+    <string name="hint_postal_code">Plz</string>
+    <string name="hint_town">Stadt</string>
+    <string name="hint_phone">Telefon Nummer</string>
+    <string name="hint_country">Land</string>
+    <string name="hint_password">Passwort</string>
+    <string name="hint_create_account">Account erstellen</string>
+    <string name="hint_login">Einloggen</string>
+    <string name="text_send">Senden</string>
+    <string name="text_correct">Korrigieren</string>
+    <string name="hint_signup">Registrieren</string>
+    <string name="text_back">\u00AB Zurück</string>
+</resources>

@@ -2,8 +2,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="Base.Theme.ChallengerLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mountains"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -19,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="27dp"
             android:text="@string/hint_login"
-            android:textSize="54sp"
+            android:textSize="30sp"
             tools:viewBindingIgnore="true" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -34,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 tools:text="jane.doe@sample.com"
+                android:textColor="@color/turquoise"
                 tools:viewBindingIgnore="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -51,23 +54,24 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 tools:text="sample"
+                android:textColor="@color/turquoise"
                 tools:viewBindingIgnore="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/button_login"
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="24dp"
             android:text="@string/hint_login" />
 
-        <Button
-            android:id="@+id/button_signup"
-            android:layout_width="100dp"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_create_account"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/hint_signup" />
+            android:text="@string/hint_create_account" />
 
     </LinearLayout>
 

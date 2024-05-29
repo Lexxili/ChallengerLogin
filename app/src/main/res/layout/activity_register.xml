@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="Base.Theme.ChallengerLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/mountains"
     tools:context=".RegisterActivity">
 
     <LinearLayout
@@ -18,22 +20,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="27dp"
-            android:textSize="54sp"
             android:text="@string/hint_signup"
-            tools:viewBindingIgnore="true"/>
+            android:textSize="30sp"
+            tools:viewBindingIgnore="true" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_first_name"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:layout_marginTop="8dp">
+                android:textColor="@color/darkGrey"
+                android:hint="@string/hint_first_name">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_first_name"
@@ -41,118 +44,134 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:inputType="textCapWords"
-                    tools:text="Jane"
-                    tools:viewBindingIgnore="true"/>
+                    android:textColor="@color/turquoise"
+                    tools:viewBindingIgnore="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_last_name"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:layout_marginTop="8dp">
+                android:hint="@string/hint_last_name">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_last_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"
-                    tools:text="Doe"
-                    tools:viewBindingIgnore="true"/>
+                    android:textColor="@color/turquoise"
+                    tools:viewBindingIgnore="true" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_street"
+                android:layout_marginTop="8dp"
                 android:layout_weight="3"
-                android:layout_marginTop="8dp">
+                android:hint="@string/hint_street">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_street"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="Samplestreet"
                     android:inputType="textCapWords"
-                    tools:viewBindingIgnore="true"/>
+                    android:textColor="@color/turquoise"
+                    tools:viewBindingIgnore="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_house_number"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:layout_marginTop="8dp">
+                android:hint="@string/hint_house_number">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_house_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    tools:text="00"
-                    tools:viewBindingIgnore="true"/>
+                    android:textColor="@color/turquoise"
+                    tools:viewBindingIgnore="true" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_postal_code"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:layout_marginTop="8dp">
+                android:hint="@string/hint_postal_code">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_postal_code"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    tools:text="000000"
-                    tools:viewBindingIgnore="true"/>
+                    android:textColor="@color/turquoise"
+                    tools:viewBindingIgnore="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_town"
+                android:layout_marginTop="8dp"
                 android:layout_weight="2"
-                android:layout_marginTop="8dp">
+                android:hint="@string/hint_town">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_town"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"
-                    tools:text="Sampletown"
-                    tools:viewBindingIgnore="true"/>
+                    android:textColor="@color/turquoise"
+                    tools:viewBindingIgnore="true" />
             </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
 
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:hint="@string/hint_country"-->
-<!--            android:layout_marginTop="8dp">-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/hint_phone">
 
-<!--            <Spinner-->
-<!--                android:id="@+id/spinner_country"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                tools:listitem="@android:layout/simple_list_item_1" />-->
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="@color/turquoise"
+                tools:viewBindingIgnore="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:hint="@string/hint_country"-->
+        <!--            android:layout_marginTop="8dp">-->
+
+        <!--            <Spinner-->
+        <!--                android:id="@+id/spinner_country"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                tools:listitem="@android:layout/simple_list_item_1" />-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -164,11 +183,12 @@
                 android:id="@+id/auto_complete_text_view_country"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:inputType="text"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
-                android:inputType="text"
-                tools:viewBindingIgnore="true"
-                tools:ignore="LabelFor" />
+                android:textColor="@color/turquoise"
+                tools:ignore="LabelFor"
+                tools:viewBindingIgnore="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -183,7 +203,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                tools:text="jane.doe@sample.com"
+                android:textColor="@color/turquoise"
                 tools:viewBindingIgnore="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -191,8 +211,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_password"
             android:layout_marginTop="8dp"
+            android:hint="@string/hint_password"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -200,7 +220,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                tools:text="sample"
+                android:textColor="@color/turquoise"
                 tools:viewBindingIgnore="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -210,7 +230,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="24dp"
-            android:text="@string/text_create_account" />
+            android:text="@string/hint_create_account" />
 
     </LinearLayout>
 

@@ -10,6 +10,7 @@ data class PersonData (
     val houseNumber: Int,
     val postalCode: Int,
     val town: String,
+    val phone: String,
     val country: Locale,
     val emailAddress: String,
     val password: String

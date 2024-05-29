@@ -17,52 +17,12 @@ class RegisterActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.buttonCreateAccount.setOnClickListener {
-            onCreateClicked()
-        }
-
         //fillCountrySpinner()
-        setCountry()
-
-
+        setupCountry()
+        setupButton()
     }
 
-    private fun onCreateClicked() {
-        val personData = PersonData(binding.editTextFirstName.text.toString(),
-            binding.editTextLastName.text.toString(),
-            binding.editTextStreet.text.toString(),
-            binding.editTextHouseNumber.text.toString().toInt(),
-            binding.editTextPostalCode.text.toString().toInt(),
-            binding.editTextTown.text.toString(),
-            // todo prüfung einbauen für null pointer
-            Locale(binding.autoCompleteTextViewCountry.text.toString()),
-            //Locale(binding.spinnerCountry.selectedItem.toString()),
-            binding.editTextEmail.text.toString(),
-            binding.editTextPassword.text.toString())
-
-        val summaryActivityIntent = Intent(this, SummaryActivity::class.java)
-        summaryActivityIntent.putExtra("Message", personData)
-        startActivity(summaryActivityIntent)
-    }
-
-    private fun fillCountrySpinner(){
-        // searches the system language
-        val locale = Locale.getDefault()
-
-        // finds the country names
-        val countryNames = Locale.getISOCountries().map { countryCode ->
-            Locale("", countryCode).getDisplayCountry(locale)
-        }.sorted()
-
-
-        // sets the names in the spinner
-        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,
-            countryNames)
-
-        //binding.spinnerCountry.adapter = spinnerAdapter
-    }
-
-    private fun setCountry(){
+    private fun setupCountry(){
         // searches the system language
         val locale = Locale.getDefault()
 
@@ -82,4 +42,47 @@ class RegisterActivity : AppCompatActivity() {
             binding.autoCompleteTextViewCountry.showDropDown()
         }
     }
+
+    private fun setupButton(){
+        binding.buttonCreateAccount.setOnClickListener {
+            onCreateClicked()
+        }
+    }
+    private fun onCreateClicked() {
+        val personData = PersonData(
+            binding.editTextFirstName.text.toString(),
+            binding.editTextLastName.text.toString(),
+            binding.editTextStreet.text.toString(),
+            binding.editTextHouseNumber.text.toString().toInt(),
+            binding.editTextPostalCode.text.toString().toInt(),
+            binding.editTextTown.text.toString(),
+            binding.editTextPhone.text.toString(),
+            // todo prüfung einbauen für null pointer
+            Locale(binding.autoCompleteTextViewCountry.text.toString()),
+            //Locale(binding.spinnerCountry.selectedItem.toString()),
+            binding.editTextEmail.text.toString(),
+            binding.editTextPassword.text.toString())
+
+        val summaryActivityIntent = Intent(this, SummaryActivity::class.java)
+        summaryActivityIntent.putExtra("Message", personData)
+        startActivity(summaryActivityIntent)
+    }
+
+//    private fun fillCountrySpinner(){
+//        // searches the system language
+//        val locale = Locale.getDefault()
+//
+//        // finds the country names
+//        val countryNames = Locale.getISOCountries().map { countryCode ->
+//            Locale("", countryCode).getDisplayCountry(locale)
+//        }.sorted()
+//
+//
+//        // sets the names in the spinner
+//        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,
+//            countryNames)
+//
+//        binding.spinnerCountry.adapter = spinnerAdapter
+//    }
+
 }
